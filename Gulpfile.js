@@ -10,7 +10,7 @@ const reload = browserSync.reload;
 
 
 gulp.task('styles', () => {
-  return gulp.src('./styles/**/*.scss')
+  return gulp.src('./styles/src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -39,7 +39,7 @@ gulp.task('browser-sync', () => {
 
 gulp.task('watch', function() {
   gulp.watch('./js/*.js', ['scripts']);
-  gulp.watch('./styles/*.scss', ['styles']);
+  gulp.watch('./styles/src/*/*.scss', ['styles']);
   gulp.watch('*.html', reload);
 });
 
