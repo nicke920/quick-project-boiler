@@ -17,7 +17,7 @@ gulp.task('styles', () => {
             cascade: false
         }))
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('./styles/'))
+    .pipe(gulp.dest('./styles/bundle'))
     .pipe(reload({stream: true}));
 });
 
